@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: linear-gradient(45deg, #14153e1c, #14153e1c), url(../img/back.png);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    /* new */
+    color-interpolation-filters: sRGB;
+    user-select: none;
+}
+
+.warpper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+/* players */
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    /* new */
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #28a745;
+    margin-bottom: 130px;
+}
+
+.active {
+    background-color: #f7f7f7;
+}
+
+.active .player-name {
+    font-weight: 300;
+}
+
+.active .player-name::after {
+    content: "O";
+    font-size: 47px;
+    position: absolute;
+    color: #28a745;
+    top: -20px;
+    right: 5px;
+    font-weight: bold;
+}
+
+.player-current-box {
+    background-color: #28a745;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+.btn-new {
+    top: 45px;
+}
+
+.btn-roll {
+    top: 403px;
+}
+
+.btn-hold {
+    top: 467px;
+}
+
+.finale-score {
+    position: absolute;
+    left: 50%;
+    top: 527px;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 240px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    text-align: center;
+    color: #555;
+}
+
+.finale-score:focus {
+    outline: none;
+}
+
+.dice {
+    filter: hue-rotate(150deg);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 15px 6px rgb(0 0 0 / 10%);
+    border-radius: 5px;
+    border: 2px solid #b5151b;
+    display: none;
+}
+
+#dice-1 {
+    top: 120px;
+}
+
+#dice-2 {
+    top: 250px;
+}
+
+.winner {
+    background-color: #f7f7f7;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #28a745;
+}
